@@ -1,0 +1,11 @@
+html {
+    background-color: rgb(28, 28, 28);
+    color: rgb(0, 100, 200)
+}
+
+.BasicInfo {
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}
