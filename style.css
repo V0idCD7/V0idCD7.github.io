@@ -4,8 +4,10 @@ html {
 }
 
 .BasicInfo {
-  width: 300px;
-  border: 15px solid green;
-  padding: 50px;
-  margin: 20px;
+    background-color: rgb(70, 20, 50);
+    width: fit-content;
+    border: 5px solid green;
+    border-radius: 25px;
+    padding: 25px;
+    margin: 20px;
 }
