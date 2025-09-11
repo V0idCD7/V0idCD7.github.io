@@ -6,6 +6,7 @@ html {
 .BasicInfo {
   width: 300px;
   border: 15px solid green;
+  border-radius: 15px;
   padding: 50px;
   margin: 20px;
 }
