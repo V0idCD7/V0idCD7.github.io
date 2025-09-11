@@ -8,7 +8,8 @@ body{
 }
 
 header {
-  background-image: link href="images/header.jpg";
+  background-image: url(images/header.jpg);
+  margin: 0;
 }
 
 .BasicInfo {
