@@ -2,12 +2,3 @@ html {
     background-color: rgb(28, 28, 28);
     color: rgb(0, 100, 200)
 }
-
-.BasicInfo {
-    background-color: rgb(70, 20, 50);
-    width: fit-content;
-    border: 5px solid green;
-    border-radius: 25px;
-    padding: 25px;
-    margin: 20px;
-}
