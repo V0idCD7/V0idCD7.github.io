@@ -6,13 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio02 Projects</title>
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <script>
+        function validateForm()
+        {
+            var username = document.forms["Form1"]["username"].value;
+            if (username == null || username == "")
+                {
+                    alert("Username must not be blank");
+                    return false;
+                }
+            
+            var password1 = document.forms["Form1"]["password1"].value;
+            var password2 = document.forms["Form1"]["password2"].value;
+            if (password1 != password2 && password1.length < 10)
+                {
+                    alert("Passwords must be at least 10 characters and match")
+                }
+            
+            var email = document.forms["Form1"]["email"].value;
+            var foundat = false;
+            var founddot = false;
+            var dotpos = 0;
+            var atpos = 0;
+            for(i=0;i<email.length;i++)
+            {
+                if(email[i]=='@')
+                    {
+                        alert("Found @ at Position:" + i);
+                        foundat = true
+                        atpos = 0 + i
+                    }
+                if(email[i]=='.')
+                    {
+                        alert("Found . at Position:" + i);
+                        founddot = true
+                        dotpos = 0 + i
+                    }
+                if(atpos <=1)
+                    {
+                        alert("Please enter a valid email");
+                        return false;
+                    }
+                if (dotpos < atpos + 2 || dotpos > email.length - 2)
+                    {
+                        alert("Please enter a valid email");
+                        return false;
+                    }
+            }
+        }
+    </script>
+    <script>
+        function rollDice()
+        {
+            var dice1 = Math.floor((Math.random() * 6) + 1);
+            document.getElementById("dice1").value = dice1;
+        }
+    </script>
 </head>
 <header>
+    
     <h1 style="text-align: center;">
         Charlie Davies' Portfolio
     </h1>
+
 </header>
 <body>
+    
     <div class="navbar">
         <ul>
         <li><a href="Portfolio03.html">About Me</a></li>
@@ -21,5 +80,29 @@
         <li><a href="contact_me.html">Contact Me</a></li>
         </ul>
     </div>
+
+    <h2>Simple Form Validation</h2>
+
+    <strong>
+        <form name="Form1" action="" onsubmit="return validateForm()" method="post">
+            <p>
+                Username: <input type="text" name="username" value="">
+                <br>
+                Email: <input type="text" name="email" value="">
+                <br>
+                Password: <input type="text" name="password1" value="">
+                <br>
+                Confirm Password: <input type="text" name="password2" value="">
+                <br>
+                <input type="submit" value="Submit">
+            </p>
+        </form>
+    </strong>
+    
+    <h2>Dice Roll</h2>
+    Dice Roll: <input type="text" id="dice1" value="1">
+    
+    <button onclick="rollDice()">Roll D6</button>
+
 </body>
 </html>
