@@ -28,6 +28,7 @@
             var founddot = false;
             var dotpos = 0;
             var atpos = 0;
+            var validEmail = false;
             for(i=0;i<email.length;i++)
             {
                 if(email[i]=='@')
@@ -45,13 +46,19 @@
                 if(atpos <=1)
                     {
                         alert("Please enter a valid email");
-                        return false;
+                        foundat = false;
                     }
                 if (dotpos < atpos + 2 || dotpos > email.length - 2)
                     {
                         alert("Please enter a valid email");
-                        return false;
+                        founddot = false;
                     }
+                if (foundat == true && founddot == true)
+                    {
+                        alert("This is a valid email");
+                        validEmail = true;
+                    }
+
             }
         }
     </script>
